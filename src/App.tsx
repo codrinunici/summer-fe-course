@@ -1,6 +1,6 @@
 import { useEffect, FC } from 'react'
-import './App.css'
 import WeatherBanner from './components/WeatherBanner/WeatherBanner'
+import HourlyWeatherCardList from './components/HourlyWeatherCardList/HourlyWeatherCardList.tsx'
 
 const App: FC = () => {
 	useEffect(() => {
@@ -9,7 +9,8 @@ const App: FC = () => {
 
 	return (
 		<>
-			<WeatherBanner></WeatherBanner>
+			<WeatherBanner />
+			<HourlyWeatherCardList />
 		</>
 	)
 }

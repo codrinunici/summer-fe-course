@@ -1,7 +1,6 @@
 import { FC } from 'react'
-import './WeatherBanner.css'
+import { Card, Typography, CardContent } from '@mui/material'
 import { Cloudy } from '../../assets/Cloudy'
-import { Card, CardContent, Typography } from '@mui/material'
 
 const WeatherBanner: FC = () => {
 	const weatherBannerStyles = {
