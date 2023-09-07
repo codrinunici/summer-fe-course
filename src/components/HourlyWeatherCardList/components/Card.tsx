@@ -9,8 +9,8 @@ const CardComp: FC = () => {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		overflow: 'auto',
-		flexDirection: 'column'
+		overflow: 'auto'
+		// flexDirection: 'column'
 	}
 	const cardContainer = {
 		backgroundColor: 'transparent',
