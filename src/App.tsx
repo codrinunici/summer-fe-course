@@ -1,16 +1,13 @@
-import { useEffect, FC } from 'react'
-import WeatherBanner from './components/WeatherBanner/WeatherBanner'
-import HourlyWeatherCardList from './components/HourlyWeatherCardList/HourlyWeatherCardList.tsx'
+import { FC } from 'react'
+
+import HourlyWeatherWidget from '@/pages/HourlyWeatherWidget'
 
 const App: FC = () => {
-	useEffect(() => {
-		console.log('kurwa')
-	}, [])
-
 	return (
 		<>
-			<WeatherBanner />
-			<HourlyWeatherCardList />
+			<HourlyWeatherWidget>
+				<div></div>
+			</HourlyWeatherWidget>
 		</>
 	)
 }

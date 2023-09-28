@@ -1,8 +1,14 @@
-import { useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import Container from '@mui/material/Container'
 import Card from './components/Card'
 
-const HourlyWeatherCardList = () => {
+interface HourlyWeatherCardListProps {
+	time: string[]
+	temperatures: number[]
+	weatherCodes: number[]
+}
+
+const HourlyWeatherCardList: FC<HourlyWeatherCardListProps> = (props) => {
 	useEffect(() => {}, [])
 	const hourlyWeatherCardListStyles = {
 		display: 'flex',
@@ -21,8 +27,13 @@ const HourlyWeatherCardList = () => {
 				maxWidth="lg"
 				style={hourlyWeatherCardListStyles}
 			>
-				{[0, 1, 2, 3, 4, 5, 6].map((val) => (
-					<Card key={val}></Card>
+				{props.time.map((val, index) => (
+					<Card
+						key={index}
+						weatherCode={props.weatherCodes[index]}
+						time={props.time[index]}
+						temperature={props.temperatures[index]}
+					/>
 				))}
 			</Container>
 		</>
